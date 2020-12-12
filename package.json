@@ -1,0 +1,16 @@
+{
+  "name": "ODB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sporz.js",
+  "start": "node sporz.js"
+  "scripts": {
+    "test": "node test1.js"
+  },
+  "keywords": [],
+  "author": "Jacques Bailhache",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+	"request": "2.81.0"
+  }
+}
