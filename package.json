@@ -5,7 +5,7 @@
   "main": "sporz.js",
   "start": "node sporz.js"
   "scripts": {
-    "test": "node test1.js"
+    "test": "node sporz.js"
   },
   "keywords": [],
   "author": "Jacques Bailhache",
