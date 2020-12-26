@@ -216,7 +216,7 @@ bot.on("message", function (message) {
 
 token = process.env.TOKEN;
 if (typeof token != 'undefined') {
-	bot.login(process.env.token);
+	bot.login(token);
 } else {
 	const config = require("./config.json");
 	bot.login(config.TOKEN);
