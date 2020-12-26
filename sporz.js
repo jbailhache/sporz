@@ -154,7 +154,13 @@ COMMANDES POUR LE CAPITAINE :\n\
 
 bot.on("ready", function () {
   console.log("Je suis connecté !");
-  bot.user.setUsername(process.env.BOTNAME);
+  //bot.user.setUsername(process.env.BOTNAME);
+  botname = process.env.BOTNAME;
+  if (typeof botname != 'undefined') {
+	  bot.user.setUsername(process.env.BOTNAME);
+  } else {
+	  bot.user.setUsername("L'ordinateur de bord");
+  }
   //console.log(bot.channels);
   channel = bot.channels.cache.find(channel => channel.name == "Test");
   if (channel) {
@@ -205,7 +211,17 @@ bot.on("message", function (message) {
 
 //const config = require("./config.json");
 //bot.login(config.TOKEN);
-bot.login(process.env.TOKEN);
+
+//bot.login(process.env.TOKEN);
+
+token = process.env.TOKEN;
+if (typeof token != 'undefined') {
+	bot.login(process.env.token);
+} else {
+	const config = require("./config.json");
+	bot.login(config.TOKEN);
+} 
+
 
 // Ecrire à tout le meonde
 function writeall(texte) {
